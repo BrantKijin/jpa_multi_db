@@ -40,7 +40,7 @@ services:
       - 1504:1521
     volumes:
       - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\kprodb\oracle-19c\oradata:/opt/oracle/oradata
-  XBIZODB:
+  XBIZDB:
     image: doctorkirk/oracle-19c
     environment:
       - ORACLE_DATABASE=XPRODB
