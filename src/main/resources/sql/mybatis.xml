@@ -1,0 +1,43 @@
+<!-- 마이바티스 참조 소스-->
+<!-- 아파트 코드로 조회후 DB 정보를 불러온다-->
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        >
+<mapper namespacae="r">
+    <select id="" parameterType="" resultType="HashMap">
+        <choose>
+            <when test='"X".equals(server_info)'>
+                SELECT APT_CD, 'XPRODB' AS DB_NAME FROM TDG_INFO@XPRODB WHERE APT_CD = #{apt_cd} AND APT_STATE = '1'
+            </when>
+            <when test='"Y".equals(server_info)'>
+                SELECT APT_CD, 'YPRODB' AS DB_NAME FROM TDG_INFO@YPRODB WHERE APT_CD = #{apt_cd} AND APT_STATE = '1'
+            </when>
+            <when test='"I".equals(server_info)'>
+                SELECT APT_CD, 'IPRODB' AS DB_NAME FROM TDG_INFO@IPRODB WHERE APT_CD = #{apt_cd} AND APT_STATE = '1'
+            </when>
+            <when test='"K".equals(server_info)'>
+                SELECT APT_CD, 'KPRODB' AS DB_NAME FROM TDG_INFO@KPRODB WHERE APT_CD = #{apt_cd} AND APT_STATE = '1'
+            </when>
+            <when test='"Z".equals(server_info)'>
+                SELECT APT_CD, 'XBIZDB' AS DB_NAME FROM TDG_INFO@XBIZDB WHERE APT_CD = #{apt_cd} AND APT_STATE = '1'
+            </when>
+            <when test='"Dev".equals(server_info)'>
+                SELECT APT_CD, 'TPRODB' AS DB_NAME FROM TDG_INFO WHERE APT_CD = #{apt_cd} AND APT_STATE = '1'
+            </when>
+            <when test='"Staging".equals(server_info)'>
+                SELECT APT_CD, 'STAGINGDB' AS DB_NAME FROM TDG_INFO WHERE APT_CD = #{apt_cd} AND APT_STATE = '1'
+            </when>
+            <otherwise>
+
+
+
+            </otherwise>
+        </choose>
+    </select>
+
+
+
+
+</mapper>
