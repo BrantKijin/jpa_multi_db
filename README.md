@@ -13,3 +13,4 @@
 | KPRODB | 5504 | XADMIN | XADMIN |
 | XBIZDB | 5505 | XADMIN | XADMIN |
 
+* resources -> sql 의 각 DB 별로 초기 데모데이터를 넣어준다 
