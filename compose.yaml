@@ -12,7 +12,7 @@ services:
       ORACLE_USER: XADMIN
       ORACLE_PASSWORD: XADMIN
     volumes:
-      - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\oracle-19c\oradata:/opt/oracle/oradata
+      - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\xprodb\oracle-19c\oradata:/opt/oracle/oradata
   yprodb:
     image: doctorkirk/oracle-19c
     restart: always
@@ -25,7 +25,7 @@ services:
       ORACLE_USER: XADMIN
       ORACLE_PASSWORD: XADMIN
     volumes:
-      - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\oracle-19c\oradata:/opt/oracle/oradata
+      - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\yprodb\oracle-19c\oradata:/opt/oracle/oradata
   iprodb:
     image: doctorkirk/oracle-19c
     restart: always
@@ -38,7 +38,7 @@ services:
       ORACLE_USER: XADMIN
       ORACLE_PASSWORD: XADMIN
     volumes:
-      - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\oracle-19c\oradata:/opt/oracle/oradata
+      - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\iprodb\oracle-19c\oradata:/opt/oracle/oradata
   kprodb:
     image: doctorkirk/oracle-19c
     restart: always
@@ -51,7 +51,7 @@ services:
       ORACLE_USER: XADMIN
       ORACLE_PASSWORD: XADMIN
     volumes:
-      - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\oracle-19c\oradata:/opt/oracle/oradata
+      - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\kprodb\oracle-19c\oradata:/opt/oracle/oradata
   xbizdb:
     image: doctorkirk/oracle-19c
     restart: always
@@ -64,4 +64,4 @@ services:
       ORACLE_USER: XADMIN
       ORACLE_PASSWORD: XADMIN
     volumes:
-      - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\oracle-19c\oradata:/opt/oracle/oradata
+      - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\xbizdb\oracle-19c\oradata:/opt/oracle/oradata
