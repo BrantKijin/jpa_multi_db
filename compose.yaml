@@ -1,57 +1,71 @@
 version: "3.9"
 services:
   XPRODB:
-    image: doctorkirk/oracle-19c
-    environment:
-      - ORACLE_DATABASE=XPRODB
-      - ORACLE_SID=XPRODB
-      - ORACLE_USERNAME=XADMIN
-      - ORACLE_PASSWORD=XADMIN
+    image: postgres:latest
     ports:
-      - 1501:1521
+      - "5501:5432"
+    environment:
+      POSTGRES_USER: XADMIN
+      POSTGRES_PASSWORD: XADMIN
+      POSTGRES_DB: XPRODB
+      TZ: "Asia/Seoul"
+    restart: always
+    container_name: XPRODB_postgres
     volumes:
-      - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\xprodb\oracle-19c\oradata:/opt/oracle/oradata
+      - ./init:/docker-entrypoint-initdb.d/
+
   YPRODB:
-    image: doctorkirk/oracle-19c
-    environment:
-      - ORACLE_DATABASE=YPRODB
-      - ORACLE_SID=YPRODB
-      - ORACLE_USERNAME=XADMIN
-      - ORACLE_PASSWORD=XADMIN
+    image: postgres:latest
     ports:
-      - 1502:1521
+      - "5502:5432"
+    environment:
+      POSTGRES_USER: XADMIN
+      POSTGRES_PASSWORD: XADMIN
+      POSTGRES_DB: YPRODB
+      TZ: "Asia/Seoul"
+    restart: always
+    container_name: YPRODB_postgres
     volumes:
-      - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\yprodb\oracle-19c\oradata:/opt/oracle/oradata
+      - ./init:/docker-entrypoint-initdb.d/
+
   IPRODB:
-    image: doctorkirk/oracle-19c
-    environment:
-      - ORACLE_DATABASE=IPRODB
-      - ORACLE_SID=IPRODB
-      - ORACLE_USERNAME=XADMIN
-      - ORACLE_PASSWORD=XADMIN
+    image: postgres:latest
     ports:
-      - 1503:1521
+      - "5503:5432"
+    environment:
+      POSTGRES_USER: XADMIN
+      POSTGRES_PASSWORD: XADMIN
+      POSTGRES_DB: IPRODB
+      TZ: "Asia/Seoul"
+    restart: always
+    container_name: IPRODB_postgres
     volumes:
-      - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\iprodb\oracle-19c\oradata:/opt/oracle/oradata
+      - ./init:/docker-entrypoint-initdb.d/
+
   KPRODB:
-    image: doctorkirk/oracle-19c
-    environment:
-      - ORACLE_DATABASE=KPRODB
-      - ORACLE_SID=KPRODB
-      - ORACLE_USERNAME=XADMIN
-      - ORACLE_PASSWORD=XADMIN
+    image: postgres:latest
     ports:
-      - 1504:1521
+      - "5504:5432"
+    environment:
+      POSTGRES_USER: XADMIN
+      POSTGRES_PASSWORD: XADMIN
+      POSTGRES_DB: KPRODB
+      TZ: "Asia/Seoul"
+    restart: always
+    container_name: KPRODB_postgres
     volumes:
-      - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\kprodb\oracle-19c\oradata:/opt/oracle/oradata
+      - ./init:/docker-entrypoint-initdb.d/
+
   XBIZDB:
-    image: doctorkirk/oracle-19c
-    environment:
-      - ORACLE_DATABASE=XBIZDB
-      - ORACLE_SID=XBIZDB
-      - ORACLE_USERNAME=XADMIN
-      - ORACLE_PASSWORD=XADMIN
+    image: postgres:latest
     ports:
-      - 1505:1521
+      - "5505:5432"
+    environment:
+      POSTGRES_USER: XADMIN
+      POSTGRES_PASSWORD: XADMIN
+      POSTGRES_DB: XBIZDB
+      TZ: "Asia/Seoul"
+    restart: always
+    container_name: XBIZDB_postgres
     volumes:
-      - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\xbizdb\oracle-19c\oradata:/opt/oracle/oradata
+      - ./init:/docker-entrypoint-initdb.d/
