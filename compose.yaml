@@ -4,6 +4,7 @@ services:
     image: doctorkirk/oracle-19c
     environment:
       - ORACLE_DATABASE=XPRODB
+      - ORACLE_SID=XPRODB
       - ORACLE_USERNAME=XADMIN
       - ORACLE_PASSWORD=XADMIN
     ports:
@@ -14,6 +15,7 @@ services:
     image: doctorkirk/oracle-19c
     environment:
       - ORACLE_DATABASE=YPRODB
+      - ORACLE_SID=YPRODB
       - ORACLE_USERNAME=XADMIN
       - ORACLE_PASSWORD=XADMIN
     ports:
@@ -24,6 +26,7 @@ services:
     image: doctorkirk/oracle-19c
     environment:
       - ORACLE_DATABASE=IPRODB
+      - ORACLE_SID=IPRODB
       - ORACLE_USERNAME=XADMIN
       - ORACLE_PASSWORD=XADMIN
     ports:
@@ -34,6 +37,7 @@ services:
     image: doctorkirk/oracle-19c
     environment:
       - ORACLE_DATABASE=KPRODB
+      - ORACLE_SID=KPRODB
       - ORACLE_USERNAME=XADMIN
       - ORACLE_PASSWORD=XADMIN
     ports:
@@ -44,6 +48,7 @@ services:
     image: doctorkirk/oracle-19c
     environment:
       - ORACLE_DATABASE=XBIZDB
+      - ORACLE_SID=XBIZDB
       - ORACLE_USERNAME=XADMIN
       - ORACLE_PASSWORD=XADMIN
     ports:
