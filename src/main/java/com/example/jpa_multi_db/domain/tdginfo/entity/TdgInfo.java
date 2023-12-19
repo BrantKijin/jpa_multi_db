@@ -1,4 +1,4 @@
-package com.example.jpa_multi_db.domain.tdginfo;
+package com.example.jpa_multi_db.domain.tdginfo.entity;
 
 import java.util.Date;
 
