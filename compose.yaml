@@ -1,67 +1,52 @@
 version: "3.9"
 services:
-  xprodb:
+  XPRODB:
     image: doctorkirk/oracle-19c
-    restart: always
+    environment:
+      - ORACLE_DATABASE=XPRODB
+      - ORACLE_USERNAME=XADMIN
+      - ORACLE_PASSWORD=XADMIN
     ports:
       - 1501:1521
-    environment:
-      ORACLE_SID: XPRODB
-      ORACLE_HOME: /opt/oracle/xe
-      ORACLE_PDB: XPRODB
-      ORACLE_USER: XADMIN
-      ORACLE_PASSWORD: XADMIN
     volumes:
       - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\xprodb\oracle-19c\oradata:/opt/oracle/oradata
-  yprodb:
+  YPRODB:
     image: doctorkirk/oracle-19c
-    restart: always
+    environment:
+      - ORACLE_DATABASE=XPRODB
+      - ORACLE_USERNAME=XADMIN
+      - ORACLE_PASSWORD=XADMIN
     ports:
       - 1502:1521
-    environment:
-      ORACLE_SID: YPRODB
-      ORACLE_HOME: /opt/oracle/xe
-      ORACLE_PDB: YPRODB
-      ORACLE_USER: XADMIN
-      ORACLE_PASSWORD: XADMIN
     volumes:
       - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\yprodb\oracle-19c\oradata:/opt/oracle/oradata
-  iprodb:
+  IPRODB:
     image: doctorkirk/oracle-19c
-    restart: always
+    environment:
+      - ORACLE_DATABASE=XPRODB
+      - ORACLE_USERNAME=XADMIN
+      - ORACLE_PASSWORD=XADMIN
     ports:
       - 1503:1521
-    environment:
-      ORACLE_SID: IPRODB
-      ORACLE_HOME: /opt/oracle/xe
-      ORACLE_PDB: IPRODB
-      ORACLE_USER: XADMIN
-      ORACLE_PASSWORD: XADMIN
     volumes:
       - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\iprodb\oracle-19c\oradata:/opt/oracle/oradata
-  kprodb:
+  KPRODB:
     image: doctorkirk/oracle-19c
-    restart: always
+    environment:
+      - ORACLE_DATABASE=XPRODB
+      - ORACLE_USERNAME=XADMIN
+      - ORACLE_PASSWORD=XADMIN
     ports:
       - 1504:1521
-    environment:
-      ORACLE_SID: KPRODB
-      ORACLE_HOME: /opt/oracle/xe
-      ORACLE_PDB: KPRODB
-      ORACLE_USER: XADMIN
-      ORACLE_PASSWORD: XADMIN
     volumes:
       - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\kprodb\oracle-19c\oradata:/opt/oracle/oradata
-  xbizdb:
+  XBIZODB:
     image: doctorkirk/oracle-19c
-    restart: always
+    environment:
+      - ORACLE_DATABASE=XPRODB
+      - ORACLE_USERNAME=XADMIN
+      - ORACLE_PASSWORD=XADMIN
     ports:
       - 1505:1521
-    environment:
-      ORACLE_SID: XBIZDB
-      ORACLE_HOME: /opt/oracle/xe
-      ORACLE_PDB: XBIZDB
-      ORACLE_USER: XADMIN
-      ORACLE_PASSWORD: XADMIN
     volumes:
       - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\xbizdb\oracle-19c\oradata:/opt/oracle/oradata
