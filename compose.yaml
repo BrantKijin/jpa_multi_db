@@ -13,7 +13,7 @@ services:
   YPRODB:
     image: doctorkirk/oracle-19c
     environment:
-      - ORACLE_DATABASE=XPRODB
+      - ORACLE_DATABASE=YPRODB
       - ORACLE_USERNAME=XADMIN
       - ORACLE_PASSWORD=XADMIN
     ports:
@@ -23,7 +23,7 @@ services:
   IPRODB:
     image: doctorkirk/oracle-19c
     environment:
-      - ORACLE_DATABASE=XPRODB
+      - ORACLE_DATABASE=IPRODB
       - ORACLE_USERNAME=XADMIN
       - ORACLE_PASSWORD=XADMIN
     ports:
@@ -33,7 +33,7 @@ services:
   KPRODB:
     image: doctorkirk/oracle-19c
     environment:
-      - ORACLE_DATABASE=XPRODB
+      - ORACLE_DATABASE=KPRODB
       - ORACLE_USERNAME=XADMIN
       - ORACLE_PASSWORD=XADMIN
     ports:
@@ -43,7 +43,7 @@ services:
   XBIZDB:
     image: doctorkirk/oracle-19c
     environment:
-      - ORACLE_DATABASE=XPRODB
+      - ORACLE_DATABASE=XBIZDB
       - ORACLE_USERNAME=XADMIN
       - ORACLE_PASSWORD=XADMIN
     ports:
