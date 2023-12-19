@@ -1,0 +1,57 @@
+version: "3.9"
+services:
+  xprodb:
+    image: gvenzl/oracle-xe
+    restart: always
+    ports:
+      - 1501:1521
+    environment:
+      ORACLE_SID: XPRODB
+      ORACLE_HOME: /opt/oracle/xe
+      ORACLE_PDB: XPRODB
+      ORACLE_USER: XADMIN
+      ORACLE_PASSWORD: XADMIN
+  yprodb:
+    image: gvenzl/oracle-xe
+    restart: always
+    ports:
+      - 1502:1521
+    environment:
+      ORACLE_SID: YPRODB
+      ORACLE_HOME: /opt/oracle/xe
+      ORACLE_PDB: YPRODB
+      ORACLE_USER: XADMIN
+      ORACLE_PASSWORD: XADMIN
+  iprodb:
+    image: gvenzl/oracle-xe
+    restart: always
+    ports:
+      - 1503:1521
+    environment:
+      ORACLE_SID: IPRODB
+      ORACLE_HOME: /opt/oracle/xe
+      ORACLE_PDB: IPRODB
+      ORACLE_USER: XADMIN
+      ORACLE_PASSWORD: XADMIN
+  kprodb:
+    image: gvenzl/oracle-xe
+    restart: always
+    ports:
+      - 1504:1521
+    environment:
+      ORACLE_SID: KPRODB
+      ORACLE_HOME: /opt/oracle/xe
+      ORACLE_PDB: KPRODB
+      ORACLE_USER: XADMIN
+      ORACLE_PASSWORD: XADMIN
+  xbizdb:
+    image: gvenzl/oracle-xe
+    restart: always
+    ports:
+      - 1505:1521
+    environment:
+      ORACLE_SID: XBIZDB
+      ORACLE_HOME: /opt/oracle/xe
+      ORACLE_PDB: XBIZDB
+      ORACLE_USER: XADMIN
+      ORACLE_PASSWORD: XADMIN
