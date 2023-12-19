@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   xprodb:
-    image: gvenzl/oracle-xe
+    image: doctorkirk/oracle-19c
     restart: always
     ports:
       - 1501:1521
@@ -14,7 +14,7 @@ services:
     volumes:
       - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\oracle-19c\oradata:/opt/oracle/oradata
   yprodb:
-    image: gvenzl/oracle-xe
+    image: doctorkirk/oracle-19c
     restart: always
     ports:
       - 1502:1521
@@ -27,7 +27,7 @@ services:
     volumes:
       - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\oracle-19c\oradata:/opt/oracle/oradata
   iprodb:
-    image: gvenzl/oracle-xe
+    image: doctorkirk/oracle-19c
     restart: always
     ports:
       - 1503:1521
@@ -40,7 +40,7 @@ services:
     volumes:
       - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\oracle-19c\oradata:/opt/oracle/oradata
   kprodb:
-    image: gvenzl/oracle-xe
+    image: doctorkirk/oracle-19c
     restart: always
     ports:
       - 1504:1521
@@ -53,7 +53,7 @@ services:
     volumes:
       - C:\Users\USER\IdeaProjects\study\jpa_multi_db\docker\oracle-19c\oradata:/opt/oracle/oradata
   xbizdb:
-    image: gvenzl/oracle-xe
+    image: doctorkirk/oracle-19c
     restart: always
     ports:
       - 1505:1521
