@@ -12,7 +12,8 @@ services:
     restart: always
     container_name: XPRODB_postgres
     volumes:
-      - ./init:/docker-entrypoint-initdb.d/
+      - xprodb-volume:/var/lib/postgresql/data
+      - ./backup/xprodb.sql:/docker-entrypoint-initdb.d/xprodb.sql
 
   YPRODB:
     image: postgres:latest
@@ -26,7 +27,8 @@ services:
     restart: always
     container_name: YPRODB_postgres
     volumes:
-      - ./init:/docker-entrypoint-initdb.d/
+      - yprodb-volume:/var/lib/postgresql/data
+      - ./backup/yprodb.sql:/docker-entrypoint-initdb.d/yprodb.sql
 
   IPRODB:
     image: postgres:latest
@@ -40,7 +42,8 @@ services:
     restart: always
     container_name: IPRODB_postgres
     volumes:
-      - ./init:/docker-entrypoint-initdb.d/
+      - iprodb-volume:/var/lib/postgresql/data
+      - ./backup/iprodb.sql:/docker-entrypoint-initdb.d/iprodb.sql
 
   KPRODB:
     image: postgres:latest
@@ -54,7 +57,8 @@ services:
     restart: always
     container_name: KPRODB_postgres
     volumes:
-      - ./init:/docker-entrypoint-initdb.d/
+      - kprodb-volume:/var/lib/postgresql/data
+      - ./backup/kprodb.sql:/docker-entrypoint-initdb.d/kprodb.sql
 
   XBIZDB:
     image: postgres:latest
@@ -68,4 +72,37 @@ services:
     restart: always
     container_name: XBIZDB_postgres
     volumes:
-      - ./init:/docker-entrypoint-initdb.d/
+      - xbizdb-volume:/var/lib/postgresql/data
+      - ./backup/xbizdb.sql:/docker-entrypoint-initdb.d/xbizdb.sql
+
+volumes:
+  xprodb-volume:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/Volumes/development/docker/xprodb'
+  yprodb-volume:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/Volumes/development/docker/yprodb'
+  iprodb-volume:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/Volumes/development/docker/iprodb'
+  kprodb-volume:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/Volumes/development/docker/kprodb'
+  xbizdb-volume:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/Volumes/development/docker/xbizdb'
