@@ -1,5 +1,5 @@
+
 spring:
-  port: 8888
   application:
     name: jpa-multi-db-test
   jpa:
@@ -35,3 +35,9 @@ spring:
     username: XADMIN
     password: XADMIN
     driver-class-name: org.postgresql.Driver
+server:
+  port: 8888
+logging:
+  level:
+    org.hibernate.SQL: DEBUG # Hibernate가 실행하는 SQL 로그를 디버그 레벨로 출력합니다.
+    org.hibernate.type: TRACE # SQL 쿼리의 바인딩된 파라미터 값을 로그로 출력합니다.
