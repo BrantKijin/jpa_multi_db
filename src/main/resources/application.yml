@@ -7,30 +7,31 @@ spring:
       ddl-auto: none
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
         # show_sql: true
-        default_batch_fetch_size: 500 # ??? ??? ?? ??
+        default_batch_fetch_size: 500
   datasource:
-    XPRODB:
-      url: jdbc:postgresql://localhost:5501/XPRODB
-      username: XADMIN
-      password: XADMIN
-    YPRODB:
-      url: jdbc:postgresql://localhost:5502/YPRODB
-      username: XADMIN
-      password: XADMIN
-    IPRDB:
-      url: jdbc:postgresql://localhost:5503/IPRDB
-      username: XADMIN
-      password: XADMIN
-    KPRODB:
-      url: jdbc:postgresql://localhost:5504/KPRODB
-      username: XADMIN
-      password: XADMIN
-    XBIZDB:
-      url: jdbc:postgresql://localhost:5505/XBIZDB
-      username: XADMIN
-      password: XADMIN
-
-
+    url: jdbc:postgresql://localhost:5501/XPRODB
+    username: XADMIN
+    password: XADMIN
+    driver-class-name: org.postgresql.Driver
+  YPRODB-datasource:
+    url: jdbc:postgresql://localhost:5502/YPRODB
+    username: XADMIN
+    password: XADMIN
+    driver-class-name: org.postgresql.Driver
+  IPRODB-datasource:
+    url: jdbc:postgresql://localhost:5503/IPRODB
+    username: XADMIN
+    password: XADMIN
+    driver-class-name: org.postgresql.Driver
+  KPRODB-datasource:
+    url: jdbc:postgresql://localhost:5504/KPRODB
+    username: XADMIN
+    password: XADMIN
+    driver-class-name: org.postgresql.Driver
+  XBIZDB-datasource:
+    url: jdbc:postgresql://localhost:5505/XBIZDB
+    username: XADMIN
+    password: XADMIN
+    driver-class-name: org.postgresql.Driver
